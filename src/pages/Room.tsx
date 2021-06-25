@@ -19,7 +19,7 @@ type RoomParams = {
 };
 
 export function Room() {
-  const { user } = useAuth();
+  const { user, signInWithGoogle } = useAuth();
   const [newQuestion, setNewQuestion] = useState("");
   const [isSendingQuestion, setIsSendingQuestion] = useState(false);
 
@@ -113,7 +113,8 @@ export function Room() {
               </div>
             ) : (
               <span>
-                Para enviar uma pergunta, <button>faça seu login.</button>
+                Para enviar uma pergunta,{" "}
+                <button onClick={signInWithGoogle}>faça seu login.</button>
               </span>
             )}
             <Button

@@ -26,10 +26,6 @@ export function Home() {
     history.push("/rooms/new");
   }
 
-  // function toastCantFiendRoom() {
-
-  // }
-
   async function handleJoinRoom(event: FormEvent) {
     event.preventDefault();
 
